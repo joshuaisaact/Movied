@@ -1,0 +1,13 @@
+.movies-menu {
+  display: flex;
+  width: 100%;
+}
+
+body {
+  width: 100%;
+}
+
+h2 {
+  color: white;
+  margin-left: 2.5rem;
+}
