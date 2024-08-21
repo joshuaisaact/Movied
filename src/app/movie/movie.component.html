@@ -1,2 +1,3 @@
-<h2>THIS IS A MOVE</h2>
-<img />
+<li *ngFor="let movie of movies">
+  <img src="https://image.tmdb.org/t/p/w300/{{ movie.poster_path }}" />
+</li>

@@ -6,15 +6,15 @@ export const MOVIES: Movie[] = [
     poster_path: '/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg',
   },
   {
-    original_title: 'Deadpool & Wolverine',
+    original_title: 'DeadSmall & Wolvermine',
     poster_path: '/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg',
   },
   {
-    original_title: 'Deadpool & Wolverine',
+    original_title: 'Wolvebrine',
     poster_path: '/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg',
   },
   {
-    original_title: 'Deadpool & Wolverine',
+    original_title: 'Deadpool',
     poster_path: '/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg',
   },
 ];

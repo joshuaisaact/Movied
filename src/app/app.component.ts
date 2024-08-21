@@ -4,8 +4,6 @@ import { MovieComponent } from './movie/movie.component';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet, MovieComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
