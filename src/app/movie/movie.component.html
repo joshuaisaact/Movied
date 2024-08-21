@@ -1,9 +1,16 @@
-<img src="https://image.tmdb.org/t/p/w300/{{ movie?.poster_path }}" />
-<h1>{{ movie?.original_title }}</h1>
-<h2>{{ movie?.tagline }}</h2>
-<p>Production Company</p>
-<span>PROD COMPANY</span>
-<p>Genre</p>
-<span>GENRE</span>
-<span>RATING</span>
-<p>SUMMARY</p>
+<app-nav-bar></app-nav-bar>
+<div class="div">
+  <div class="div-detail">
+    <img src="https://image.tmdb.org/t/p/w300/{{ movie?.poster_path }}" />
+    <div class="right-detail">
+      <h1>{{ movie?.original_title }}</h1>
+      <h2>{{ movie?.tagline }}</h2>
+      <p>Production Company</p>
+      <span>PRODUCTION COMPANY</span>
+      <p>Genre</p>
+      <span>GENRE</span>
+      <span>POPULARITY: {{ movie?.popularity }}</span>
+    </div>
+  </div>
+  <p>{{ movie?.overview }}</p>
+</div>

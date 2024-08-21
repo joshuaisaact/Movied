@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { MovieDetails } from '../movie';
 import { ApiClientService } from '../api-client.service';
 import { ActivatedRoute } from '@angular/router';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-movie',

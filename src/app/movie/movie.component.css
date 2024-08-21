@@ -12,3 +12,17 @@
   gap: 2rem;
   flex-flow: wrap;
 }
+
+* {
+  color: white;
+}
+
+body {
+  background-color: #1f1f1f;
+  height: 100%;
+}
+
+.div-detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
