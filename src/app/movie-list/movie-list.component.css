@@ -1,0 +1,14 @@
+.movies {
+  li {
+    position: relative;
+    cursor: pointer;
+  }
+  li:hover {
+    left: 0.1em;
+  }
+  display: flex;
+  width: 100%;
+  list-style-type: none;
+  gap: 2rem;
+  flex-flow: wrap;
+}

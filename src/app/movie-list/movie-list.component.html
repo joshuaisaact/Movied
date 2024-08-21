@@ -1,0 +1,7 @@
+<ul class="movies">
+  <li *ngFor="let movie of movies">
+    <a routerLink="/movie/{{ movie?.id }}">
+      <img src="https://image.tmdb.org/t/p/w300/{{ movie.poster_path }}"
+    /></a>
+  </li>
+</ul>

@@ -1,16 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { Movie } from '../movie';
-import { MovieComponent } from '../movie/movie.component';
+// import { MOVIES } from '../mock-movies';
+import { NgFor } from '@angular/common';
 import { ApiClientService } from '../api-client.service';
-import { NavBarComponent } from '../nav-bar/nav-bar.component';
-import { MovieListComponent } from '../movie-list/movie-list.component';
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrl: './dashboard.component.css',
+  selector: 'app-movie-list',
+  templateUrl: './movie-list.component.html',
+  styleUrl: './movie-list.component.css',
 })
-export class DashboardComponent implements OnInit {
+export class MovieListComponent {
   movies: Movie[] = [];
 
   constructor(private movieService: ApiClientService) {}
@@ -22,4 +21,8 @@ export class DashboardComponent implements OnInit {
   getMovies(): void {
     this.movieService.getMovies().subscribe((movies) => (this.movies = movies));
   }
+  // movie: Movie = {
+  //   poster_path: 'hi',
+  //   original_title: 'hello',
+  // };
 }

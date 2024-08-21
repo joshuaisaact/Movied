@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Movie } from './movie';
+import { Movie, MovieDetails } from './movie';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 
@@ -17,5 +17,17 @@ export class ApiClientService {
 
   getMovies(): Observable<Movie[]> {
     return this.http.get<Movie[]>(`${this.moviesURL}/categories/28`);
+  }
+
+  getDiscoverMovies(): Observable<Movie[]> {
+    return this.http.get<Movie[]>(`${this.moviesURL}/discover`);
+  }
+
+  getCategoryMovies(categoryId: number): Observable<Movie[]> {
+    return this.http.get<Movie[]>(`${this.moviesURL}/categories/${categoryId}`);
+  }
+
+  getMovieDetails(movieID: number | undefined): Observable<MovieDetails> {
+    return this.http.get<MovieDetails>(`${this.moviesURL}/movie/${movieID}`);
   }
 }

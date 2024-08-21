@@ -1,5 +1,9 @@
-<ul class="movies">
-  <li *ngFor="let movie of movies">
-    <img src="https://image.tmdb.org/t/p/w300/{{ movie.poster_path }}" />
-  </li>
-</ul>
+<img src="https://image.tmdb.org/t/p/w300/{{ movie?.poster_path }}" />
+<h1>{{ movie?.original_title }}</h1>
+<h2>{{ movie?.tagline }}</h2>
+<p>Production Company</p>
+<span>PROD COMPANY</span>
+<p>Genre</p>
+<span>GENRE</span>
+<span>RATING</span>
+<p>SUMMARY</p>
