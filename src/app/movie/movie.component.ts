@@ -2,7 +2,8 @@ import { Component, OnInit, Input } from '@angular/core';
 import { MovieDetails } from '../movie';
 import { ApiClientService } from '../api-client.service';
 import { ActivatedRoute } from '@angular/router';
-import { NgIf } from '@angular/common';
+import { StarRatingComponent } from '../star-rating/star-rating.component';
+import { NgIf, NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-movie',
@@ -28,5 +29,15 @@ export class MovieComponent implements OnInit {
     this.movieService
       .getMovieDetails(id)
       .subscribe((movie) => (this.movie = movie));
+  }
+
+  get firstProductionCompanyName(): string | null {
+    return this.movie?.production_companies?.length
+      ? this.movie.production_companies[0].name
+      : null;
+  }
+
+  get firstGenre(): string | null {
+    return this.movie?.genres?.length ? this.movie.genres[0].name : null;
   }
 }

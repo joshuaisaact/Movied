@@ -1,0 +1,12 @@
+i.fas,
+i.far {
+  font-size: 2rem;
+}
+
+i.fas {
+  color: #cc7b19; /* Change to desired color */
+}
+
+i.far {
+  -webkit-text-fill-color: #848484; /* Change to desired color */
+}

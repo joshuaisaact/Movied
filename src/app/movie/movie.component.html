@@ -5,12 +5,33 @@
     <div class="right-detail">
       <h1>{{ movie?.original_title }}</h1>
       <h2>{{ movie?.tagline }}</h2>
-      <p>Production Company</p>
-      <span>PRODUCTION COMPANY</span>
-      <p>Genre</p>
-      <span>GENRE</span>
-      <span>POPULARITY: {{ movie?.popularity }}</span>
+
+      <p *ngIf="firstProductionCompanyName">
+        <span class="grey-txt">Production Company:</span>
+        {{ firstProductionCompanyName }}
+      </p>
+      <p *ngIf="!firstProductionCompanyName">
+        No production company available.
+      </p>
+
+      <p *ngIf="firstGenre">
+        <span class="grey-txt">Genre:</span>
+        {{ firstGenre }}
+      </p>
+      <p *ngIf="!firstGenre">No production company available.</p>
+      <!-- <span>POPULARITY: {{ movie?.vote_average }}</span> -->
+
+      <p *ngIf="firstGenre">
+        <span class="grey-txt">Release Date:</span>
+        {{ movie?.release_date | date : "dd-MM-yyyy" }}
+      </p>
+      <p *ngIf="!firstGenre">No production company available.</p>
+      <!-- <span>POPULARITY: {{ movie?.vote_average }}</span> -->
+
+      <app-star-rating [rating]="movie?.vote_average ?? 0"></app-star-rating>
     </div>
   </div>
-  <p>{{ movie?.overview }}</p>
+  <div class="movie-summary">
+    <p>{{ movie?.overview }}</p>
+  </div>
 </div>

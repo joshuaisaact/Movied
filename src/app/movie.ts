@@ -18,5 +18,7 @@ export interface MovieDetails {
   genres: Array<{ id: number; name: string }>;
   poster_path: string;
   popularity: number;
+  release_date: string;
   tagline: string;
+  vote_average: number;
 }

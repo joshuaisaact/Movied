@@ -4,11 +4,12 @@
     cursor: pointer;
   }
   li:hover {
-    left: 0.1em;
+    bottom: 0.2em;
   }
   display: flex;
   width: 100%;
   list-style-type: none;
   gap: 2rem;
-  flex-flow: wrap;
+  flex-shrink: 0;
+  overflow-x: auto;
 }

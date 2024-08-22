@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Movie } from '../movie';
-// import { MOVIES } from '../mock-movies';
 import { NgFor } from '@angular/common';
 import { ApiClientService } from '../api-client.service';
 
@@ -10,7 +9,8 @@ import { ApiClientService } from '../api-client.service';
   styleUrl: './movie-list.component.css',
 })
 export class MovieListComponent {
-  movies: Movie[] = [];
+  @Input() category: number = 28;
+  movies?: Movie[] = [];
 
   constructor(private movieService: ApiClientService) {}
 
@@ -19,10 +19,8 @@ export class MovieListComponent {
   }
 
   getMovies(): void {
-    this.movieService.getMovies().subscribe((movies) => (this.movies = movies));
+    this.movieService
+      .getCategoryMovies(this.category)
+      .subscribe((movies) => (this.movies = movies));
   }
-  // movie: Movie = {
-  //   poster_path: 'hi',
-  //   original_title: 'hello',
-  // };
 }
