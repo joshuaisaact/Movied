@@ -1,0 +1,44 @@
+#name {
+  font-size: 2rem;
+  background-color: #333;
+  border-radius: 10px;
+  color: #cc7b19;
+}
+::placeholder {
+  color: #cc7b19;
+  opacity: 1; /* Firefox */
+}
+.search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.movies {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #333; /* or another color that matches your theme */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Ensure it appears above other elements */
+}
+
+.movies li {
+  padding: 0.5rem;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+}
+
+.movies li a {
+  text-decoration: none;
+  color: #f8f5f5;
+}
+
+.movies li:hover {
+  background-color: #ccc;
+}

@@ -1,4 +1,19 @@
-<div>
-  <label for="name">Search: </label>
-  <input id="name" [(ngModel)]="hero.name" placeholder="search" />
+<div class="search">
+  <div>
+    <!-- <i class="fas fa-search"></i> -->
+    <input
+      id="name"
+      [(ngModel)]="searchQuery"
+      placeholder="Search..."
+      (input)="onSearchChange()"
+    />
+  </div>
+
+  <ul *ngIf="movies.length > 0" class="movies">
+    <li *ngFor="let movie of movies">
+      <a [routerLink]="['/movie', movie?.id]">
+        {{ movie?.original_title }}
+      </a>
+    </li>
+  </ul>
 </div>
